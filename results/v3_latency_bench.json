@@ -1,0 +1,63 @@
+{
+  "cold_load_s": 20.12,
+  "e2e_3q": {
+    "n": 32,
+    "min": 0.243,
+    "p50": 0.248,
+    "p90": 0.252,
+    "p95": 0.254,
+    "p99": 0.258,
+    "max": 0.26,
+    "mean": 0.248,
+    "throughput_qps": 4.029
+  },
+  "e2e_1q": {
+    "n": 32,
+    "min": 0.175,
+    "p50": 0.18,
+    "p90": 0.188,
+    "p95": 0.197,
+    "p99": 0.212,
+    "max": 0.219,
+    "mean": 0.183,
+    "throughput_qps": 5.474
+  },
+  "breakdown_s": {
+    "encode": 0.0046,
+    "forward": 0.2433,
+    "post": 0.0018
+  },
+  "input_tokens": 370,
+  "batch": {
+    "2": {
+      "forward_s": 0.419,
+      "qps": 4.768,
+      "peak_mem_mib": 4733.0
+    },
+    "4": {
+      "forward_s": 0.764,
+      "qps": 5.233,
+      "peak_mem_mib": 4855.0
+    },
+    "8": {
+      "forward_s": 4.954,
+      "qps": 1.615,
+      "peak_mem_mib": 5095.0
+    }
+  },
+  "peak_mem_mib": 5095.0,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "adapter": "model/adapter_v3",
+  "max_seq": 4500,
+  "sample": "1 state + 3 questions / 9 options（一次直出）",
+  "pctl_method": "线性插值分位数，n=32，torch.cuda.synchronize() 后计时",
+  "note": "本地 Windows / RTX 3060 Laptop 6GB / 无 causal_conv1d / 无 FA2；吞吐为单请求串行 qps 与批量 qps，非服务端并发压测",
+  "long_case": {
+    "status": "未测得本地数值",
+    "sample": "V3 test 中最长 case: security_incidents / 17 问题 / 4,378 token",
+    "reason": "本地 RTX 3060 6GB 专用显存 5.7/6.0 GB (98%)，驱动溢出到共享 GPU 内存 3.0 GB，数据在 PCIe 上搬运，单次前向极慢；叠加无 FA2 / 无 causal_conv1d。",
+    "distinction": "不是 CUDA OutOfMemoryError（无异常、进程存活、GPU 100%），是 WDDM 显存超订。",
+    "implication": "4,500 token 长序列的延时只能在 A10 22GB 上测；简历不应报本地长序列延时。"
+  },
+  "hardware_limit_note": "batch=8 掉到 1.61 req/s（peak 5095 MiB）与长 case 跑不完是同一根因：6GB 显存不足。本地最优 batch=4 = 5.23 req/s。"
+}

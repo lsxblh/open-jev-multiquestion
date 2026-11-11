@@ -1,0 +1,63 @@
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+W1030 16:34:22.880000 56686 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1030 16:34:22.910000 56686 site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[xformers|WARNING]WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.10.0+cu128 with CUDA 1208 (you have 2.13.0+cu130)
+    Python  3.10.19 (you have 3.12.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+Unsloth: xformers is installed but cannot load with torch 2.13.0+cu130 (it was built for 2.10.0+cu128), so PyTorch attention is used instead.
+To install a matching xformers, run `unsloth install-kernels xformers`, or `pip uninstall xformers` to hide this. UNSLOTH_ENABLE_LOGGING=1 shows the full error.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2026.10.10: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 23.675 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.10.10: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 23.675 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:52,  6.45it/s]Loading weights:   2%|▏         | 12/723 [00:00<00:13, 54.59it/s]Loading weights:   4%|▍         | 28/723 [00:00<00:07, 93.35it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:05, 118.02it/s]Loading weights:   9%|▉         | 64/723 [00:00<00:04, 141.57it/s]Loading weights:  11%|█         | 80/723 [00:00<00:04, 142.61it/s]Loading weights:  14%|█▎        | 98/723 [00:00<00:04, 152.69it/s]Loading weights:  16%|█▌        | 114/723 [00:00<00:03, 154.01it/s]Loading weights:  18%|█▊        | 132/723 [00:01<00:03, 155.95it/s]Loading weights:  20%|██        | 148/723 [00:01<00:03, 152.57it/s]Loading weights:  23%|██▎       | 164/723 [00:01<00:03, 149.24it/s]Loading weights:  25%|██▌       | 184/723 [00:01<00:03, 162.33it/s]Loading weights:  28%|██▊       | 201/723 [00:01<00:03, 153.77it/s]Loading weights:  30%|███       | 217/723 [00:01<00:03, 152.07it/s]Loading weights:  33%|███▎      | 238/723 [00:01<00:02, 163.34it/s]Loading weights:  35%|███▌      | 255/723 [00:01<00:02, 158.28it/s]Loading weights:  37%|███▋      | 271/723 [00:01<00:02, 157.76it/s]Loading weights:  40%|███▉      | 289/723 [00:01<00:02, 163.80it/s]Loading weights:  42%|████▏     | 306/723 [00:02<00:02, 158.16it/s]Loadpainting-geometry-v1                           n=  3072  acc=0.9980  ece=0.0293  loss=0.0378
+reasoning-control-v1                           n=   681  acc=0.7474  ece=0.0551  loss=0.6348
+snake-v1                                       n=  1392  acc=0.7989  ece=0.0710  loss=0.4925
+tic_tac_toe-v1                                 n=   472  acc=0.3305  ece=0.0686  loss=1.2005
+tile_platformer-v1                             n=   202  acc=0.8911  ece=0.0473  loss=0.4305
+trex_runner-v1                                 n=     4  acc=0.5000  ece=0.4031  loss=1.1385
+vizdoom-basic-v1                               n=   858  acc=0.8706  ece=0.0717  loss=0.3724
+workflow-controls-v1/agent_trace_observability n=   357  acc=0.9552  ece=0.0391  loss=0.1470
+workflow-controls-v1/customer_service          n=   368  acc=0.9375  ece=0.0362  loss=0.1844
+workflow-controls-v1/invoice_processing        n=   870  acc=0.9517  ece=0.0128  loss=0.1345
+workflow-controls-v1/security_incidents        n=  1326  acc=0.9751  ece=0.0194  loss=0.1086
+
+==========================================================================================
+按题型分组（每个 case 只含一个问题，所以题��=case）
+==========================================================================================
+kind=choice                                    n=  2408  acc=0.7512  ece=0.0629  loss=0.5618
+    4  acc=0.5000  ece=0.4031  loss=1.1385
+vizdoom-basic-v1                               n=   858  acc=0.8706  ece=0.0717  loss=0.3724
+workflow-controls-v1/agent_trace_observability n=   357  acc=0.9552  ece=0.0391  loss=0.1470
+workflow-controls-v1/customer_service          n=   368  acc=0.9375  ece=0.0362  loss=0.1844
+workflow-controls-v1/invoice_processing        n=   870  acc=0.9517  ece=0.0128  loss=0.1345
+workflow-controls-v1/security_incidents        n=  1326  acc=0.9751  ece=0.0194  loss=0.1086
+
+==========================================================================================
+按题型分组（每个 case 只含一个问题，所以题��=case）
+==========================================================================================
+kind=choice                                    n=  2408  acc=0.7512  ece=0.0629  loss=0.5618
+4  acc=0.5000  ece=0.4031  loss=1.1385
+vizdoom-basic-v1                               n=   858  acc=0.8706  ece=0.0717  loss=0.3724
+workflow-controls-v1/agent_trace_observability n=   357  acc=0.9552  ece=0.0391  loss=0.1470
+workflow-controls-v1/customer_service          n=   368  acc=0.9375  ece=0.0362  loss=0.1844
+workflow-controls-v1/invoice_processing        n=   870  acc=0.9517  ece=0.0128  loss=0.1345
+workflow-controls-v1/security_incidents        n=  1326  acc=0.9751  ece=0.0194  loss=0.1086
+
+==========================================================================================
+按题型分组（每个 case 只含一个问题，所以题��=case）
+==========================================================================================
+kind=choice                                    n=  2408  acc=0.7512  ece=0.0629  loss=0.5618

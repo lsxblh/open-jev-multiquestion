@@ -1,0 +1,63 @@
+{
+  "max_seq": 4500,
+  "painting_sample_rate": 0.05,
+  "painting_seed": 3407,
+  "policy": "train: 原生保留 + painting 拆后分层抽 5%; eval: 排除 painting, 原样不拆不合并",
+  "splits": {
+    "train": {
+      "native_cases": 14403,
+      "painting_cases_in_source": 138,
+      "painting_fragments_total": 23552,
+      "painting_fragments_kept": 1177,
+      "total_cases": 15580,
+      "total_questions": 55523,
+      "multi_question_cases": 9765,
+      "groups": 7256,
+      "size_mb": 0.626
+    },
+    "calibration": {
+      "native_cases": 1078,
+      "painting_cases_in_source": 3,
+      "painting_fragments_total": 0,
+      "painting_fragments_kept": 0,
+      "total_cases": 1078,
+      "total_questions": 4086,
+      "multi_question_cases": 707,
+      "groups": 467,
+      "size_mb": 0.071
+    },
+    "validation": {
+      "native_cases": 932,
+      "painting_cases_in_source": 3,
+      "painting_fragments_total": 0,
+      "painting_fragments_kept": 0,
+      "total_cases": 932,
+      "total_questions": 3145,
+      "multi_question_cases": 588,
+      "groups": 451,
+      "size_mb": 0.068
+    },
+    "test": {
+      "native_cases": 1902,
+      "painting_cases_in_source": 18,
+      "painting_fragments_total": 0,
+      "painting_fragments_kept": 0,
+      "total_cases": 1902,
+      "total_questions": 7136,
+      "multi_question_cases": 1224,
+      "groups": 887,
+      "size_mb": 0.107
+    },
+    "ood": {
+      "native_cases": 1772,
+      "painting_cases_in_source": 18,
+      "painting_fragments_total": 0,
+      "painting_fragments_kept": 0,
+      "total_cases": 1772,
+      "total_questions": 8627,
+      "multi_question_cases": 1772,
+      "groups": 1396,
+      "size_mb": 0.105
+    }
+  }
+}

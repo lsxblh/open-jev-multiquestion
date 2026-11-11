@@ -1,0 +1,193 @@
+=== 环境自检 ===
+W1111 14:12:25.569000 3526 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1111 14:12:25.598000 3526 site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[xformers|WARNING]WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.10.0+cu128 with CUDA 1208 (you have 2.13.0+cu130)
+    Python  3.10.19 (you have 3.12.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+Unsloth: xformers is installed but cannot load with torch 2.13.0+cu130 (it was built for 2.10.0+cu128), so PyTorch attention is used instead.
+To install a matching xformers, run `unsloth install-kernels xformers`, or `pip uninstall xformers` to hide this. UNSLOTH_ENABLE_LOGGING=1 shows the full error.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+torch 2.13.0+cu130 cuda True NVIDIA A10
+=== 1/3 短请求 + 批量吞吐（370 token, 3 问题 / 9 选项）===
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+W1111 14:12:49.301000 3813 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1111 14:12:49.332000 3813 site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[xformers|WARNING]WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.10.0+cu128 with CUDA 1208 (you have 2.13.0+cu130)
+    Python  3.10.19 (you have 3.12.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+Unsloth: xformers is installed but cannot load with torch 2.13.0+cu130 (it was built for 2.10.0+cu128), so PyTorch attention is used instead.
+To install a matching xformers, run `unsloth install-kernels xformers`, or `pip uninstall xformers` to hide this. UNSLOTH_ENABLE_LOGGING=1 shows the full error.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2026.11.3: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 22.068 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.11.3: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 22.068 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:12<2:26:47, 12.20s/it]Loading weights:   1%|          | 8/723 [00:12<13:51,  1.16s/it]  Loading weights:   1%|▏         | 10/723 [00:12<10:25,  1.14it/s]Loading weights:   2%|▏         | 12/723 [00:13<08:35,  1.38it/s]Loading weights:   2%|▏         | 13/723 [00:13<07:57,  1.49it/s]Loading weights:   2%|▏         | 14/723 [00:14<07:27,  1.58it/s]Loading weights:   3%|▎         | 22/723 [00:14<02:40,  4.37it/s]Loading weights:   3%|▎         | 24/723 [00:14<02:23,  4.87it/s]Loading weights:   4%|▎         | 26/723 [00:15<02:37,  4.43it/s]Loading weights:   4%|▎         | 27/723 [00:15<02:56,  3.93it/s]Loading weights:   4%|▍         | 28/723 [00:16<03:19,  3.49it/s]Loading weights:   5%|▍         | 36/723 [00:16<01:32,  7.39it/s]Loading weights:   5%|▌         | 37/723 [00:17<01:37,  7.06it/s]Loading weights:   5%|▌         | 39/723 [00:17<01:29,  7.65it/s]Loading weights:   6%|▌         | 40/723 [00:17<02:15,  5.04it/s]Loading weights:   6%|▌         | 41/723 [00:18<02:38,  4.30it/s]Loading weights:   6%|▌         | 42/723 [00:18<03:04,  3.68it/s]Loading weights:   6%|▌         | 45/723 [00:19<02:32,  4.45it/s]Loading weights:   6%|▋         | 46/723 [00:19<02:55,  3.85it/s]Loading weights:   7%|▋         | 47/723 [00:20<03:19,  3.38it/s]Loading weights:   7%|▋         | 51/723 [00:20<01:54,  5.88it/s]Loading weights:   7%|▋         | 53/723 [00:20<02:03,  5.44it/s]Loading weights:   8%|▊         | 61/723 [00:21<01:10,  9.35it/s]Loading weights:   9%|▊         | 62/723 [00:21<01:16,  8.61it/s]Loading weights:   9%|▉         | 64/723 [00:21<01:16,  8.58it/s]Loading weights:   9%|▉         | 65/723 [00:22<01:53,  5.79it/s]Loading weights:   9%|▉         | 66/723 [00:22<02:23,  4.59it/s]Loading weights:   9%|▉         | 67/723 [00:23<02:52,  3.81it/s]Loading weights:  10%|█         | 75/723 [00:23<01:15,  8.60it/s]Loading weights:  11%|█         | 76/723 [00:23<01:20,  8.05it/s]Loading weights:  11%|█         | 78/723 [00:23<01:18,  8.24it/s]Loading weights:  11%|█         | 79/723 [00:24<01:51,  5.78it/s]Loading weights:  11%|█         | 80/723 [00:24<02:25,  4.42it/s]Loading weights:  11%|█         | 81/723 [00:25<02:49,  3.78it/s]Loading weights:  12%|█▏        | 89/723 [00:25<01:14,  8.51it/s]Loading weights:  12%|█▏        | 90/723 [00:25<01:20,  7.85it/s]Loading weights:  13%|█▎        | 92/723 [00:26<01:15,  8.36it/s]Loading weights:  13%|█▎        | 93/723 [00:26<02:06,  4.97it/s]Loading weights:  13%|█▎        | 94/723 [00:27<02:32,  4.13it/s]Loading weights:  13%|█▎        | 95/723 [00:27<02:54,  3.60it/s]Loading weights:  14%|█▎        | 98/723 [00:28<02:14,  4.66it/s]Loading weights:  14%|█▎        | 99/723 [00:28<02:40,  3.89it/s]Loading weights:  14%|█▍        | 100/723 [00:28<03:01,  3.42it/s]Loading weights:  14%|█▍        | 104/723 [00:29<01:41,  6.08it/s]Loading weights:  15%|█▍        | 106/723 [00:29<01:45,  5.85it/s]Loading weights:  16%|█▌        | 114/723 [00:30<01:04,  9.46it/s]Loading weights:  16%|█▌        | 115/723 [00:30<01:09,  8.74it/s]Loading weights:  16%|█▌        | 117/723 [00:30<01:06,  9.10it/s]Loading weights:  16%|█▋        | 118/723 [00:30<01:33,  6.45it/s]Loading weights:  16%|█▋        | 119/723 [00:31<01:59,  5.04it/s]Loading weights:  17%|█▋        | 120/723 [00:31<02:24,  4.16it/s]Loading weights:  18%|█▊        | 128/723 [00:32<01:07,  8.85it/s]Loading weights:  18%|█▊        | 129/723 [00:32<01:14,  7.95it/s]Loading weights:  18%|█▊        | 131/723 [00:32<01:09,  8.48it/s]Loading weights:  18%|█▊        | 132/723 [00:32<01:37,  6.08it/s]Loading weights:  18%|█▊        | 133/723 [00:33<02:06,  4.67it/s]Loading weights:  19%|█▊        | 134/723 [00:33<02:30,  3.91it/s]Loading weights:  20%|█▉        | 142/723 [00:34<01:05,  8.91it/s]Loading weights:  20%|█▉        | 143/723 [00:34<01:13,  7.93it/s]Loading weights:  20%|██        | 145/723 [00:34<01:08,  8.43it/s]Loading weights:  20%|██        | 146/723 [00:35<01:33,  6.17it/s]Loading weights:  20%|██        | 147/723 [00:35<02:02,  4.69it/s]Loading weights:  20%|██        | 148/723 [00:36<02:30,  3.82it/s]Loading weights:  21%|██        | 151/723 [00:36<02:02,  4.67it/s]Loading weights:  21%|██        | 152/723 [00:36<02:27,  3.88it/s]Loading weights:  21%|██        | 153/723 [00:37<02:58,  3.18it/s]Loading weights:  22%|██▏       | 157/723 [00:37<01:39,  5.68it/s]Loading weights:  22%|██▏       | 159/723 [00:38<01:42,  5.49it/s]Loading weights:  23%|██▎       | 167/723 [00:38<01:00,  9.26it/s]Loading weights:  23%|██▎       | 168/723 [00:38<01:03,  8.69it/s]Loading weights:  24%|██▎       | 170/723 [00:38<01:00,  9.15it/s]Loading weights:  24%|██▎       | 171/723 [00:39<01:24,  6.56it/s]Loading weights:  24%|██▍       | 172/723 [00:39<01:51,  4.96it/s]Loading weights:  24%|██▍       | 173/723 [00:40<02:15,  4.07it/s]Loading weights:  25%|██▌       | 181/723 [00:40<00:58,  9.21it/s]Loading weights:  25%|██▌       | 182/723 [00:40<01:07,  8.07it/s]Loading weights:  25%|██▌       | 184/723 [00:41<01:05,  8.17it/s]Loading weights:  26%|██▌       | 185/723 [00:41<01:28,  6.10it/s]Loading weights:  26%|██▌       | 186/723 [00:41<01:50,  4.88it/s]Loading weights:  26%|██▌       | 187/723 [00:42<02:19,  3.86it/s]Loading weights:  27%|██▋       | 195/723 [00:42<01:02,  8.46it/s]Loading weights:  27%|██▋       | 196/723 [00:43<01:05,  8.00it/s]Loading weights:  27%|██▋       | 198/723 [00:43<01:00,  8.65it/s]Loading weights:  28%|██▊       | 199/723 [00:43<01:23,  6.29it/s]Loading weights:  28%|██▊       | 200/723 [00:44<01:44,  4.99it/s]Loading weights:  28%|██▊       | 201/723 [00:44<02:05,  4.17it/s]Loading weights:  28%|██▊       | 204/723 [00:44<01:43,  5.02it/s]Loading weights:  28%|██▊       | 205/723 [00:45<02:05,  4.14it/s]Loading weights:  28%|██▊       | 206/723 [00:45<02:27,  3.52it/s]Loading weights:  29%|██▉       | 210/723 [00:45<01:24,  6.07it/s]Loading weights:  29%|██▉       | 212/723 [00:46<01:29,  5.72it/s]Loading weights:  30%|███       | 220/723 [00:46<00:51,  9.79it/s]Loading weights:  31%|███       | 222/723 [00:47<00:50,  9.97it/s]Loading weights:  31%|███       | 224/723 [00:47<01:11,  6.95it/s]Loading weights:  31%|███       | 225/723 [00:48<01:31,  5.44it/s]Loading weights:  31%|███▏      | 226/723 [00:48<01:54,  4.36it/s]Loading weights:  32%|███▏      | 234/723 [00:48<00:56,  8.69it/s]Loading weights:  33%|███▎      | 235/723 [00:49<01:01,  7.92it/s]Loading weights:  33%|███▎      | 237/723 [00:49<00:58,  8.31it/s]Loading weights:  33%|███▎      | 238/723 [00:49<01:20,  6.05it/s]Loading weights:  33%|███▎      | 239/723 [00:50<01:38,  4.91it/s]Loading weights:  33%|███▎      | 240/723 [00:50<02:05,  3.86it/s]Loading weights:  34%|███▍      | 248/723 [00:51<00:54,  8.76it/s]Loading weights:  34%|███▍      | 249/723 [00:51<00:58,  8.13it/s]Loading weights:  35%|███▍      | 251/723 [00:51<00:58,  8.12it/s]Loading weights:  35%|███▍      | 252/723 [00:52<01:22,  5.69it/s]Loading weights:  35%|███▍      | 253/723 [00:52<01:40,  4.68it/s]Loading weights:  35%|███▌      | 254/723 [00:52<02:00,  3.90it/s]Loading weights:  36%|███▌      | 257/723 [00:53<01:40,  4.63it/s]Loading weights:  36%|███▌      | 258/723 [00:53<01:59,  3.88it/s]Loading weights:  36%|███▌      | 259/723 [00:54<02:14,  3.45it/s]Loading weights:  36%|███▋      | 263/723 [00:54<01:15,  6.10it/s]Loading weights:  37%|███▋      | 265/723 [00:54<01:18,  5.86it/s]Loading weights:  38%|███▊      | 273/723 [00:55<00:45,  9.80it/s]Loading weights:  38%|███▊      | 275/723 [00:55<00:45,  9.95it/s]Loading weights:  38%|███▊      | 277/723 [00:56<01:04,  6.93it/s]Loading weights:  38%|███▊      | 278/723 [00:56<01:19,  5.60it/s]Loading weights:  39%|███▊      | 279/723 [00:57<01:39,  4.45it/s]Loading weights:  40%|███▉      | 287/723 [00:57<00:49,  8.77it/s]Loading weights:  40%|███▉      | 288/723 [00:57<00:53,  8.17it/s]Loading weights:  40%|████      | 290/723 [00:57<00:49,  8.71it/s]Loading weights:  40%|████      | 291/723 [00:58<01:11,  6.07it/s]Loading weights:  40%|████      | 292/723 [00:58<01:32,  4.66it/s]Loading weights:  41%|████      | 293/723 [00:59<01:47,  3.98it/s]Loading weights:  42%|████▏     | 301/723 [00:59<00:47,  8.88it/s]Loading weights:  42%|████▏     | 302/723 [00:59<00:50,  8.28it/s]Loading weights:  42%|████▏     | 304/723 [00:59<00:49,  8.46it/s]Loading weights:  42%|████▏     | 305/723 [01:00<01:09,  6.04it/s]Loading weights:  42%|████▏     | 306/723 [01:00<01:29,  4.67it/s]Loading weights:  42%|████▏     | 307/723 [01:01<01:45,  3.94it/s]Loading weights:  43%|████▎     | 310/723 [01:01<01:24,  4.88it/s]Loading weights:  43%|████▎     | 311/723 [01:02<01:41,  4.04it/s]Loading weights:  43%|████▎     | 312/723 [01:02<01:57,  3.50it/s]Loading weights:  44%|████▎     | 316/723 [01:02<01:08,  5.98it/s]Loading weights:  44%|████▍     | 318/723 [01:03<01:17,  5.24it/s]Loading weights:  45%|████▌     | 326/723 [01:03<00:44,  8.95it/s]Loading weights:  45%|████▌     | 327/723 [01:04<00:47,  8.37it/s]Loading weights:  46%|████▌     | 329/723 [01:04<00:44,  8.77it/s]Loading weights:  46%|████▌     | 330/723 [01:04<01:00,  6.45it/s]Loading weights:  46%|████▌     | 331/723 [01:05<01:18,  5.02it/s]Loading weights:  46%|████▌     | 332/723 [01:05<01:37,  3.99it/s]Loading weights:  47%|████▋     | 340/723 [01:05<00:42,  8.97it/s]Loading weights:  47%|████▋     | 341/723 [01:06<00:48,  7.84it/s]Loading weights:  47%|████▋     | 343/723 [01:06<00:49,  7.71it/s]Loading weights:  48%|████▊     | 344/723 [01:06<01:07,  5.64it/s]Loading weights:  48%|████▊     | 345/723 [01:07<01:21,  4.62it/s]Loading weights:  48%|████▊     | 346/723 [01:07<01:37,  3.86it/s]Loading weights:  49%|████▉     | 354/723 [01:08<00:41,  8.93it/s]Loading weights:  49%|████▉     | 355/723 [01:08<00:44,  8.28it/s]Loading weights:  49%|████▉     | 357/723 [01:08<00:41,  8.73it/s]Loading weights:  50%|████▉     | 358/723 [01:08<01:01,  5.97it/s]Loading weights:  50%|████▉     | 359/723 [01:09<01:17,  4.69it/s]Loading weights:  50%|████▉     | 360/723 [01:09<01:38,  3.67it/s]Loading weights:  50%|█████     | 363/723 [01:10<01:17,  4.62it/s]Loading weights:  50%|█████     | 364/723 [01:10<01:32,  3.88it/s]Loading weights:  50%|█████     | 365/723 [01:11<01:49,  3.27it/s]Loading weights:  51%|█████     | 369/723 [01:11<01:01,  5.75it/s]Loading weights:  51%|█████▏    | 371/723 [01:11<01:03,  5.50it/s]Loading weights:  52%|█████▏    | 379/723 [01:12<00:36,  9.40it/s]Loading weights:  53%|█████▎    | 380/723 [01:12<00:39,  8.70it/s]Loading weights:  53%|█████▎    | 382/723 [01:12<00:37,  9.13it/s]Loading weights:  53%|█████▎    | 383/723 [01:13<00:51,  6.55it/s]Loading weights:  53%|█████▎    | 384/723 [01:13<01:07,  5.01it/s]Loading weights:  53%|█████▎    | 385/723 [01:14<01:24,  4.02it/s]Loading weights:  54%|█████▍    | 393/723 [01:14<00:38,  8.47it/s]Loading weights:  54%|█████▍    | 394/723 [01:14<00:41,  7.97it/s]Loading weights:  55%|█████▍    | 396/723 [01:14<00:39,  8.38it/s]Loading weights:  55%|█████▍    | 397/723 [01:15<00:53,  6.05it/s]Loading weights:  55%|█████▌    | 398/723 [01:15<01:09,  4.66it/s]Loading weights:  55%|█████▌    | 399/723 [01:16<01:31,  3.54it/s]Loading weights:  56%|█████▋    | 407/723 [01:16<00:38,  8.26it/s]Loading weights:  56%|█████▋    | 408/723 [01:17<00:41,  7.63it/s]Loading weights:  57%|█████▋    | 410/723 [01:17<00:38,  8.15it/s]Loading weights:  57%|█████▋    | 411/723 [01:17<00:54,  5.67it/s]Loading weights:  57%|█████▋    | 412/723 [01:18<01:09,  4.47it/s]Loading weights:  57%|█████▋    | 413/723 [01:18<01:22,  3.78it/s]Loading weights:  58%|█████▊    | 416/723 [01:19<01:02,  4.87it/s]Loading weights:  58%|█████▊    | 417/723 [01:19<01:16,  4.00it/s]Loading weights:  58%|█████▊    | 418/723 [01:19<01:32,  3.29it/s]Loading weights:  58%|█████▊    | 422/723 [01:20<00:52,  5.76it/s]Loading weights:  59%|█████▊    | 424/723 [01:20<00:57,  5.24it/s]Loading weights:  59%|█████▉    | 430/723 [01:20<00:28, 10.19it/s]Loading weights:  60%|██████    | 434/723 [01:20<00:22, 12.87it/s]Loading weights:  61%|██████▏   | 444/723 [01:21<00:11, 23.28it/s]Loading weights:  62%|██████▏   | 451/723 [01:21<00:08, 30.29it/s]Loading weights:  63%|██████▎   | 456/723 [01:21<00:08, 30.68it/s]Loading weights:  64%|██████▍   | 464/723 [01:21<00:06, 38.91it/s]Loading weights:  65%|██████▍   | 469/723 [01:21<00:06, 38.13it/s]Loading weights:  66%|██████▌   | 476/723 [01:21<00:05, 44.33it/s]Loading weights:  67%|██████▋   | 482/723 [01:21<00:06, 38.17it/s]Loading weights:  68%|██████▊   | 492/723 [01:22<00:05, 45.72it/s]Loading weights:  69%|██████▉   | 502/723 [01:22<00:04, 52.83it/s]Loading weights:  70%|███████   | 508/723 [01:22<00:04, 47.03it/s]Loading weights:  71%|███████▏  | 516/723 [01:22<00:04, 48.04it/s]Loading weights:  72%|███████▏  | 524/723 [01:22<00:03, 54.50it/s]Loading weights:  73%|███████▎  | 530/723 [01:22<00:04, 42.58it/s]Loading weights:  75%|███████▍  | 540/723 [01:23<00:03, 47.59it/s]Loading weights:  76%|███████▌  | 550/723 [01:23<00:03, 46.31it/s]Loading weights:  77%|███████▋  | 555/723 [01:23<00:03, 42.61it/s]Loading weights:  78%|███████▊  | 564/723 [01:23<00:03, 44.78it/s]Loading weights:  79%|███████▉  | 574/723 [01:23<00:02, 50.71it/s]Loading weights:  80%|████████  | 580/723 [01:23<00:03, 44.46it/s]Loading weights:  81%|████████▏ | 588/723 [01:24<00:02, 47.67it/s]Loading weights:  82%|████████▏ | 593/723 [01:24<00:02, 47.76it/s]Loading weights:  83%|████████▎ | 600/723 [01:24<00:02, 45.11it/s]Loading weights:  84%|████████▍ | 608/723 [01:24<00:02, 51.14it/s]Loading weights:  85%|████████▍ | 614/723 [01:24<00:02, 42.15it/s]Loading weights:  86%|████████▋ | 624/723 [01:24<00:01, 49.61it/s]Loading weights:  88%|████████▊ | 634/723 [01:25<00:01, 54.65it/s]Loading weights:  89%|████████▊ | 640/723 [01:25<00:01, 49.22it/s]Loading weights:  90%|████████▉ | 648/723 [01:25<00:01, 47.58it/s]Loading weights:  91%|█████████ | 658/723 [01:25<00:01, 53.01it/s]Loading weights:  92%|█████████▏| 664/723 [01:25<00:01, 47.74it/s]Loading weights:  93%|█████████▎| 672/723 [01:25<00:01, 47.20it/s]Loading weights:  94%|█████████▍| 680/723 [01:25<00:00, 53.70it/s]Loading weights:  95%|█████████▍| 686/723 [01:26<00:00, 41.95it/s]Loading weights:  96%|█████████▋| 696/723 [01:26<00:00, 48.46it/s]Loading weights:  98%|█████████▊| 706/723 [01:26<00:00, 53.02it/s]Loading weights:  98%|█████████▊| 712/723 [01:26<00:00, 49.49it/s]Loading weights:  99%|█████████▉| 718/723 [01:27<00:00, 28.40it/s]Loading weights: 100%|██████████| 723/723 [01:27<00:00,  8.29it/s]
+Unsloth: compiling each transformer block as one region (Qwen3_5DecoderLayer).
+[1] 冷启动加载: 222.48s
+[2] warmup ...
+[3] 端到端 3 问题 / 9 选项: p50=0.175s  qps=5.715
+[4] 端到端 1 问题 / 4 选项: p50=0.174s
+[5] 拆分: {'encode': 0.0028, 'forward': 0.143, 'post': 0.0002}  tokens=370
+[6] batch=2: 11.891s  0.17 req/s  peak=4675.0 MiB
+[6] batch=4: 0.303s  13.18 req/s  peak=4771.0 MiB
+[6] batch=8: 0.626s  12.79 req/s  peak=4963.0 MiB
+[6] batch=16: 1.038s  15.42 req/s  peak=5346.0 MiB
+[6] batch=32: 1.880s  17.02 req/s  peak=6112.0 MiB
+[DONE] /mnt/workspace/runs/v3/latency_a10.json
+=== 2/3 真实长序列（test 集 p50/p90/max, 整条一次直出）===
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+W1111 14:18:10.093000 6091 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1111 14:18:10.123000 6091 site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[xformers|WARNING]WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.10.0+cu128 with CUDA 1208 (you have 2.13.0+cu130)
+    Python  3.10.19 (you have 3.12.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+Unsloth: xformers is installed but cannot load with torch 2.13.0+cu130 (it was built for 2.10.0+cu128), so PyTorch attention is used instead.
+To install a matching xformers, run `unsloth install-kernels xformers`, or `pip uninstall xformers` to hide this. UNSLOTH_ENABLE_LOGGING=1 shows the full error.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2026.11.3: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 22.068 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.11.3: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 22.068 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:49,  6.57it/s]Loading weights:   6%|▌         | 40/723 [00:00<00:03, 191.88it/s]Loading weights:  11%|█         | 80/723 [00:00<00:02, 270.57it/s]Loading weights:  17%|█▋        | 120/723 [00:00<00:01, 312.44it/s]Loading weights:  23%|██▎       | 167/723 [00:00<00:01, 362.01it/s]Loading weights:  28%|██▊       | 205/723 [00:00<00:01, 362.03it/s]Loading weights:  35%|███▍      | 252/723 [00:00<00:01, 391.00it/s]Loading weights:  40%|████      | 292/723 [00:00<00:01, 387.50it/s]Loading weights:  46%|████▌     | 332/723 [00:00<00:01, 386.88it/s]Loading weights:  52%|█████▏    | 379/723 [00:01<00:00, 407.05it/s]Loading weights:  58%|█████▊    | 420/723 [00:01<00:00, 394.69it/s]Loading weights:  89%|████████▉ | 647/723 [00:01<00:00, 939.58it/s]Loading weights: 100%|██████████| 723/723 [00:01<00:00, 541.69it/s]
+Unsloth: compiling each transformer block as one region (Qwen3_5DecoderLayer).
+[1] 加载 133.44s  decision_config.max_len=4500
+[2] test 全量编码 1902 条: min=196 p50=577 max=4384
+[3] p50: 577 token / 1 题 / tile_platformer-v1
+    p50=0.175s  p95=0.177s  qps=5.714  peak=4659.0 MiB
+[3] p90: 2219 token / 8 题 / workflow-controls-v1/customer_service
+    p50=0.392s  p95=0.394s  qps=2.552  peak=4859.0 MiB
+[3] max: 4384 token / 17 题 / workflow-controls-v1/security_incidents
+    p50=0.709s  p95=0.714s  qps=1.411  peak=5137.0 MiB
+[4] batch=2: 8.841s  0.23 req/s
+[4] batch=4: 2.983s  1.34 req/s
+[DONE] /mnt/workspace/runs/v3/latency_long_a10.json
+=== 3/3 冷启动 / 前 5 次推理 ===
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+W1111 14:22:24.022000 7747 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1111 14:22:24.051000 7747 site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[xformers|WARNING]WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.10.0+cu128 with CUDA 1208 (you have 2.13.0+cu130)
+    Python  3.10.19 (you have 3.12.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+Unsloth: xformers is installed but cannot load with torch 2.13.0+cu130 (it was built for 2.10.0+cu128), so PyTorch attention is used instead.
+To install a matching xformers, run `unsloth install-kernels xformers`, or `pip uninstall xformers` to hide this. UNSLOTH_ENABLE_LOGGING=1 shows the full error.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2026.11.3: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 22.068 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.11.3: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 22.068 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:51,  6.50it/s]Loading weights:   6%|▌         | 40/723 [00:00<00:03, 190.19it/s]Loading weights:  11%|█         | 80/723 [00:00<00:02, 270.46it/s]Loading weights:  17%|█▋        | 120/723 [00:00<00:01, 312.07it/s]Loading weights:  23%|██▎       | 167/723 [00:00<00:01, 360.11it/s]Loading weights:  28%|██▊       | 205/723 [00:00<00:01, 358.62it/s]Loading weights:  35%|███▍      | 252/723 [00:00<00:01, 388.17it/s]Loading weights:  40%|████      | 292/723 [00:00<00:01, 386.40it/s]Loading weights:  46%|████▌     | 332/723 [00:00<00:01, 385.17it/s]Loading weights:  51%|█████▏    | 372/723 [00:01<00:00, 389.36it/s]Loading weights:  58%|█████▊    | 416/723 [00:01<00:00, 398.36it/s]Loading weights:  85%|████████▍ | 612/723 [00:01<00:00, 858.41it/s]Loading weights: 100%|██████████| 723/723 [00:01<00:00, 538.04it/s]
+Unsloth: compiling each transformer block as one region (Qwen3_5DecoderLayer).
+load_s = 133.1
+第 1..5 次推理耗时(s) = [5.884, 0.174, 0.174, 0.173, 0.172]
+=== 完成 ===
+-rw-r--r-- 1 root root  107 11月 11 14:24 /mnt/workspace/runs/v3/cold_a10.json
+-rw-r--r-- 1 root root 1.5K 11月 11 14:17 /mnt/workspace/runs/v3/latency_a10.json
+-rw-r--r-- 1 root root 1.6K 11月 11 14:22 /mnt/workspace/runs/v3/latency_long_a10.json
+{
+  "adapter": "/mnt/workspace/runs/v3/adapter",
+  "max_seq": 4500,
+  "gpu": "NVIDIA A10",
+  "platform": "Linux-5.10.134-18.0.13.lifsea8.x86_64-x86_64-with-glibc2.35",
+  "cold_load_s": 133.44,
+  "n": 32,
+  "pctl_method": "线性插值分位数，torch.cuda.synchronize() 后计时",
+  "note": "整条多问题一次直出，无逐条合并；test 集真实 case，非合成样本",
+  "cases": {
+    "p50": {
+      "source": "tile_platformer-v1",
+      "input_tokens": 577,
+      "n_questions": 1,
+      "min": 0.173,
+      "p50": 0.175,
+      "p90": 0.176,
+      "p95": 0.177,
+      "p99": 0.178,
+      "max": 0.178,
+      "mean": 0.175,
+      "throughput_qps": 5.714,
+      "peak_mem_mib": 4659.0
+    },
+    "p90": {
+      "source": "workflow-controls-v1/customer_service",
+      "input_tokens": 2219,
+      "n_questions": 8,
+      "min": 0.389,
+      "p50": 0.392,
+      "p90": 0.393,
+      "p95": 0.394,
+      "p99": 0.394,
+      "max": 0.394,
+      "mean": 0.392,
+      "throughput_qps": 2.552,
+      "peak_mem_mib": 4859.0
+    },
+    "max": {
+      "source": "workflow-controls-v1/security_incidents",
+      "input_tokens": 4384,
+      "n_questions": 17,
+      "min": 0.7,
+      "p50": 0.709,
+      "p90": 0.714,
+      "p95": 0.714,
+      "p99": 0.715,
+      "max": 0.715,
+      "mean": 0.709,
+      "throughput_qps": 1.411,
+      "peak_mem_mib": 5137.0
+    }
+  },
+  "batch_on_max": {
+    "2": {
+      "forward_s": 8.841,
+      "qps": 0.226,
+      "peak_mem_mib": 5710.0
+    },
+    "4": {
+      "forward_s": 2.983,
+      "qps": 1.341,
+      "peak_mem_mib": 6841.0
+    }
+  }
+}

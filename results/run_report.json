@@ -1,0 +1,48 @@
+{
+  "config": {
+    "data": "/mnt/workspace/data/release-v2",
+    "model": "/mnt/workspace/models/Qwen3.5-4B",
+    "out": "runs/rv2",
+    "max_seq": 1024,
+    "lora_r": 16,
+    "steps": 200,
+    "epochs": 2,
+    "bs": 8,
+    "accum": 4,
+    "lr": 0.0002,
+    "warmup": 10,
+    "seed": 3407,
+    "max_rows": 0,
+    "eval_rows": 512,
+    "eval_every": 50,
+    "save_every": 100,
+    "skip_baseline": true,
+    "resume": true
+  },
+  "train_runtime_s": 0.009,
+  "calibration": {
+    "accuracy": 0.93359375,
+    "ece": 0.030601890233811047,
+    "loss": 0.24565409256010395,
+    "record_accuracy": 0.93359375,
+    "fitted_types": [
+      0,
+      1,
+      2
+    ]
+  },
+  "validation": "accuracy=0.9102  ece=0.0429  loss=0.2627  record_accuracy=0.9102",
+  "test": {
+    "accuracy": 0.9765625,
+    "ece": 0.013727890269365111,
+    "loss": 0.09803896078540934,
+    "record_accuracy": 0.9765625
+  },
+  "ood": {
+    "accuracy": 0.96484375,
+    "ece": 0.0186730882851407,
+    "loss": 0.12225617103221366,
+    "record_accuracy": 0.96484375
+  },
+  "total_minutes": 5.4
+}

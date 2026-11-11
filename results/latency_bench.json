@@ -1,0 +1,47 @@
+{
+  "cold_load_s": 21.87,
+  "e2e_3q": {
+    "n": 8,
+    "min": 0.24,
+    "p50": 0.246,
+    "p90": 0.248,
+    "max": 0.256,
+    "mean": 0.246,
+    "throughput_qps": 4.063
+  },
+  "e2e_1q": {
+    "n": 8,
+    "min": 0.181,
+    "p50": 0.186,
+    "p90": 0.2,
+    "max": 0.203,
+    "mean": 0.189,
+    "throughput_qps": 5.295
+  },
+  "breakdown_s": {
+    "encode": 0.003,
+    "forward": 0.2491,
+    "post": 0.001
+  },
+  "input_tokens": 370,
+  "batch": {
+    "2": {
+      "forward_s": 0.443,
+      "qps": 4.517,
+      "peak_mem_mib": 4733.0
+    },
+    "4": {
+      "forward_s": 0.804,
+      "qps": 4.975,
+      "peak_mem_mib": 4855.0
+    },
+    "8": {
+      "forward_s": 2.526,
+      "qps": 3.167,
+      "peak_mem_mib": 5095.0
+    }
+  },
+  "peak_mem_mib": 5095.0,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "note": "本地 Windows / RTX 3060 Laptop 6GB / 无 causal_conv1d / 无 FA2"
+}

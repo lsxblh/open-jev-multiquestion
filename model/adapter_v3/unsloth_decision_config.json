@@ -1,0 +1,13 @@
+{
+  "layout": "clef",
+  "max_len": 4500,
+  "temperature": [
+    1.0180342197418213,
+    0.7107648849487305,
+    1.0194605588912964
+  ],
+  "base_model": "Qwen/Qwen3.5-4B",
+  "load_in_4bit": true,
+  "fine_tuned": true,
+  "folded_temperature": 1.0257488489151
+}

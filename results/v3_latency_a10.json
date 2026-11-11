@@ -1,0 +1,66 @@
+{
+  "cold_load_s": 222.48,
+  "e2e_3q": {
+    "n": 32,
+    "min": 0.173,
+    "p50": 0.175,
+    "p90": 0.177,
+    "p95": 0.178,
+    "p99": 0.178,
+    "max": 0.178,
+    "mean": 0.175,
+    "throughput_qps": 5.715
+  },
+  "e2e_1q": {
+    "n": 32,
+    "min": 0.172,
+    "p50": 0.174,
+    "p90": 0.177,
+    "p95": 0.177,
+    "p99": 0.366,
+    "max": 0.45,
+    "mean": 0.183,
+    "throughput_qps": 5.477
+  },
+  "breakdown_s": {
+    "encode": 0.0028,
+    "forward": 0.143,
+    "post": 0.0002
+  },
+  "input_tokens": 370,
+  "batch": {
+    "2": {
+      "forward_s": 11.891,
+      "qps": 0.168,
+      "peak_mem_mib": 4675.0
+    },
+    "4": {
+      "forward_s": 0.303,
+      "qps": 13.183,
+      "peak_mem_mib": 4771.0
+    },
+    "8": {
+      "forward_s": 0.626,
+      "qps": 12.786,
+      "peak_mem_mib": 4963.0
+    },
+    "16": {
+      "forward_s": 1.038,
+      "qps": 15.418,
+      "peak_mem_mib": 5346.0
+    },
+    "32": {
+      "forward_s": 1.88,
+      "qps": 17.022,
+      "peak_mem_mib": 6112.0
+    }
+  },
+  "peak_mem_mib": 6112.0,
+  "gpu": "NVIDIA A10",
+  "adapter": "/mnt/workspace/runs/v3/adapter",
+  "max_seq": 4500,
+  "sample": "1 state + 3 questions / 9 options（一次直出）",
+  "pctl_method": "线性插值分位数，n=32，torch.cuda.synchronize() 后计时",
+  "platform": "Linux-5.10.134-18.0.13.lifsea8.x86_64-x86_64-with-glibc2.35",
+  "note": "Linux / NVIDIA A10；吞吐为单请求串行 qps 与批量 qps，非服务端并发压测；kernel 支持情况（FA2 / causal_conv1d）以启动日志为准"
+}

@@ -1,0 +1,66 @@
+{
+  "adapter": "/mnt/workspace/runs/v3/adapter",
+  "max_seq": 4500,
+  "gpu": "NVIDIA A10",
+  "platform": "Linux-5.10.134-18.0.13.lifsea8.x86_64-x86_64-with-glibc2.35",
+  "cold_load_s": 133.44,
+  "n": 32,
+  "pctl_method": "线性插值分位数，torch.cuda.synchronize() 后计时",
+  "note": "整条多问题一次直出，无逐条合并；test 集真实 case，非合成样本",
+  "cases": {
+    "p50": {
+      "source": "tile_platformer-v1",
+      "input_tokens": 577,
+      "n_questions": 1,
+      "min": 0.173,
+      "p50": 0.175,
+      "p90": 0.176,
+      "p95": 0.177,
+      "p99": 0.178,
+      "max": 0.178,
+      "mean": 0.175,
+      "throughput_qps": 5.714,
+      "peak_mem_mib": 4659.0
+    },
+    "p90": {
+      "source": "workflow-controls-v1/customer_service",
+      "input_tokens": 2219,
+      "n_questions": 8,
+      "min": 0.389,
+      "p50": 0.392,
+      "p90": 0.393,
+      "p95": 0.394,
+      "p99": 0.394,
+      "max": 0.394,
+      "mean": 0.392,
+      "throughput_qps": 2.552,
+      "peak_mem_mib": 4859.0
+    },
+    "max": {
+      "source": "workflow-controls-v1/security_incidents",
+      "input_tokens": 4384,
+      "n_questions": 17,
+      "min": 0.7,
+      "p50": 0.709,
+      "p90": 0.714,
+      "p95": 0.714,
+      "p99": 0.715,
+      "max": 0.715,
+      "mean": 0.709,
+      "throughput_qps": 1.411,
+      "peak_mem_mib": 5137.0
+    }
+  },
+  "batch_on_max": {
+    "2": {
+      "forward_s": 8.841,
+      "qps": 0.226,
+      "peak_mem_mib": 5710.0
+    },
+    "4": {
+      "forward_s": 2.983,
+      "qps": 1.341,
+      "peak_mem_mib": 6841.0
+    }
+  }
+}

@@ -1,0 +1,65 @@
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+W1111 14:32:32.030000 10861 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1111 14:32:32.059000 10861 site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[xformers|WARNING]WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.10.0+cu128 with CUDA 1208 (you have 2.13.0+cu130)
+    Python  3.10.19 (you have 3.12.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+Unsloth: xformers is installed but cannot load with torch 2.13.0+cu130 (it was built for 2.10.0+cu128), so PyTorch attention is used instead.
+To install a matching xformers, run `unsloth install-kernels xformers`, or `pip uninstall xformers` to hide this. UNSLOTH_ENABLE_LOGGING=1 shows the full error.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2026.11.3: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 22.068 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.11.3: Fast Qwen3_5 patching. Transformers: 5.17.0. vLLM: 0.27.1.
+   \\   /|    NVIDIA A10. Num GPUs = 1. Max memory: 22.068 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.13.0+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:47,  6.69it/s]Loading weights:   6%|▌         | 41/723 [00:00<00:03, 193.07it/s]Loading weights:  11%|█         | 81/723 [00:00<00:02, 273.26it/s]Loading weights:  18%|█▊        | 128/723 [00:00<00:01, 341.61it/s]Loading weights:  24%|██▎       | 170/723 [00:00<00:01, 364.42it/s]Loading weights:  29%|██▉       | 208/723 [00:00<00:01, 363.75it/s]Loading weights:  35%|███▍      | 253/723 [00:00<00:01, 385.54it/s]Loading weights:  41%|████      | 293/723 [00:00<00:01, 384.08it/s]Loading weights:  47%|████▋     | 340/723 [00:00<00:00, 404.78it/s]Loading weights:  53%|█████▎    | 382/723 [00:01<00:00, 406.05it/s]Loading weights:  59%|█████▊    | 423/723 [00:01<00:00, 395.88it/s]Loading weights:  91%|█████████▏| 660/723 [00:01<00:00, 970.57it/s]Loading weights: 100%|██████████| 723/723 [00:01<00:00, 545.52it/s]
+Unsloth: compiling each transformer block as one region (Qwen3_5DecoderLayer).
+[data] test: 1902 行
+
+==========================================================================================
+按 source 分组
+==========================================================================================
+customer-control-v1                            n=   101  acc=0.9818  ece=0.0121  loss=0.0483
+reasoning-control-v1                           n=   227  acc=0.8341  ece=0.0258  loss=0.3720
+snake-v1                                       n=   348  acc=0.8700  ece=0.0359  loss=0.3068
+tic_tac_toe-v1                                 n=   472  acc=0.3665  ece=0.0896  loss=1.1841
+tile_platformer-v1                             n=   202  acc=0.8020  ece=0.0593  loss=0.3427
+trex_runner-v1                                 n=     4  acc=0.7500  ece=0.4467  loss=1.5232
+vizdoom-basic-v1                               n=   286  acc=0.9522  ece=0.0141  loss=0.1389
+workflow-controls-v1/agent_trace_observability n=    51  acc=0.9804  ece=0.0229  loss=0.0736
+workflow-controls-v1/customer_service          n=    46  acc=0.9755  ece=0.0201  loss=0.0436
+workflow-controls-v1/invoice_processing        n=    87  acc=0.9736  ece=0.0314  loss=0.0740
+workflow-controls-v1/security_incidents        n=    78  acc=0.9864  ece=0.0074  loss=0.0364
+
+==========================================================================================
+按题型分组（每个 case 只含一个问题，所以题��=case）
+==========================================================================================
+kind=choice                                    n=  1640  acc=0.6872  ece=0.0421  loss=0.6178
+kind=noul                                      n=  4680  acc=0.9455  ece=0.0108  loss=0.1457
+kind=score                                     n=   816  acc=0.9020  ece=0.0325  loss=0.2561
+
+==========================================================================================
+最难/最易 source 排序（按 accuracy）
+==========================================================================================
+  0.3665  ece=0.0896  n=   472  tic_tac_toe-v1
+  0.7500  ece=0.4467  n=     4  trex_runner-v1
+  0.8020  ece=0.0593  n=   202  tile_platformer-v1
+  0.8341  ece=0.0258  n=   227  reasoning-control-v1
+  0.8700  ece=0.0359  n=   348  snake-v1
+  0.9522  ece=0.0141  n=   286  vizdoom-basic-v1
+  0.9736  ece=0.0314  n=    87  workflow-controls-v1/invoice_processing
+  0.9755  ece=0.0201  n=    46  workflow-controls-v1/customer_service
+  0.9804  ece=0.0229  n=    51  workflow-controls-v1/agent_trace_observability
+  0.9818  ece=0.0121  n=   101  customer-control-v1
+  0.9864  ece=0.0074  n=    78  workflow-controls-v1/security_incidents

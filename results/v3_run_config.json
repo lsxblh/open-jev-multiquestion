@@ -1,0 +1,20 @@
+{
+  "data": "/mnt/workspace/data/hybrid_v3",
+  "model": "/mnt/workspace/models/Qwen3.5-4B",
+  "out": "runs/v3",
+  "max_seq": 4500,
+  "lora_r": 16,
+  "steps": 400,
+  "epochs": 2,
+  "bs": 2,
+  "accum": 8,
+  "lr": 0.0002,
+  "warmup": 10,
+  "seed": 3407,
+  "max_rows": 0,
+  "eval_rows": 0,
+  "eval_every": 100,
+  "save_every": 100,
+  "skip_baseline": false,
+  "resume": false
+}

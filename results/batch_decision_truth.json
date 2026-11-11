@@ -1,0 +1,44 @@
+{
+  "N=3": {
+    "questions": 36,
+    "per_question_acc": 0.8611,
+    "joint_acc": 0.8611,
+    "conf_a": 0.8058,
+    "conf_b": 0.8097,
+    "both_right": 30,
+    "only_per_question": 1,
+    "only_joint": 1,
+    "both_wrong": 4
+  },
+  "N=4": {
+    "questions": 48,
+    "per_question_acc": 0.8125,
+    "joint_acc": 0.8542,
+    "conf_a": 0.73,
+    "conf_b": 0.6881,
+    "both_right": 38,
+    "only_per_question": 1,
+    "only_joint": 3,
+    "both_wrong": 6
+  },
+  "N=6": {
+    "questions": 72,
+    "per_question_acc": 0.9722,
+    "joint_acc": 0.9444,
+    "conf_a": 0.9827,
+    "conf_b": 0.9794,
+    "both_right": 67,
+    "only_per_question": 3,
+    "only_joint": 1,
+    "both_wrong": 1
+  },
+  "TOTAL": {
+    "questions": 156,
+    "per_question_acc": 0.8974,
+    "joint_acc": 0.8974,
+    "both_right": 135,
+    "only_per_question": 5,
+    "only_joint": 5,
+    "both_wrong": 11
+  }
+}

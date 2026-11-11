@@ -1,0 +1,397 @@
+{
+  "state": "客户反馈：订单被重复扣款两次，已经等了三天，要求立刻退款，否则就投诉。",
+  "questions": {
+    "route": {
+      "type": "choice",
+      "instructions": "这个工单应该交给哪个团队处理？",
+      "criteria": {
+        "billing": "账单、发票、退款相关",
+        "account": "账号登录、资料修改相关",
+        "technical": "程序缺陷、接口集成相关",
+        "other": "以上都不是"
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "instructions": "这个工单的紧急程度如何？",
+      "criteria": [
+        "可以正常排队等待",
+        "需要优先处理",
+        "需要立即人工介入"
+      ]
+    },
+    "refund_requested": {
+      "type": "noul",
+      "instructions": "客户是否明确提出了退款请求？"
+    }
+  },
+  "input_tokens": 370,
+  "decoded_input": "<|im_start|>system\nRead the complete state and schema. Decide every field jointly. Each answer must be exactly one of that field's allowed options.<|im_end|>\n<|im_start|>user\nSTATE:\n客户反馈：订单被重复扣款两次，已经等了三天，要求立刻退款，否则就投诉。\n\nSCHEMA FIELDS:\n\nFIELD 1\nID: route\nTYPE: choice\nINSTRUCTION: 这个工单应该交给哪个团队处理？\nALLOWED OPTIONS:\nOPTION 1: {\"description\":\"账号登录、资料修改相关\",\"option_id\":\"account\"}\nOPTION 2: {\"description\":\"账单、发票、退款相关\",\"option_id\":\"billing\"}\nOPTION 3: {\"description\":\"以上都不是\",\"option_id\":\"other\"}\nOPTION 4: {\"description\":\"程序缺陷、接口集成相关\",\"option_id\":\"technical\"}\nEND FIELD\n\nFIELD 2\nID: urgency\nTYPE: score\nINSTRUCTION: 这个工单的紧急程度如何？\nALLOWED OPTIONS:\nOPTION 1: {\"description\":\"可以正常排队等待\",\"option_id\":\"0\"}\nOPTION 2: {\"description\":\"需要优先处理\",\"option_id\":\"1\"}\nOPTION 3: {\"description\":\"需要立即人工介入\",\"option_id\":\"2\"}\nEND FIELD\n\nFIELD 3\nID: refund_requested\nTYPE: noul\nINSTRUCTION: 客户是否明确提出了退款请求？\nALLOWED OPTIONS:\nOPTION 1: {\"description\":\"The proposition is true or the answer is yes.\",\"option_id\":\"true\"}\nOPTION 2: {\"description\":\"The proposition is false or the answer is no.\",\"option_id\":\"false\"}\nEND FIELD\n\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nJOINT SCHEMA DECISIONS:",
+  "encoded_questions": [
+    {
+      "question_id": "route",
+      "question_type": 1,
+      "question_span": [
+        82,
+        91
+      ],
+      "option_ids": [
+        "account",
+        "billing",
+        "other",
+        "technical"
+      ],
+      "option_spans": [
+        [
+          102,
+          117
+        ],
+        [
+          123,
+          138
+        ],
+        [
+          144,
+          155
+        ],
+        [
+          161,
+          176
+        ]
+      ]
+    },
+    {
+      "question_id": "urgency",
+      "question_type": 2,
+      "question_span": [
+        197,
+        204
+      ],
+      "option_ids": [
+        "0",
+        "1",
+        "2"
+      ],
+      "option_spans": [
+        [
+          215,
+          228
+        ],
+        [
+          234,
+          246
+        ],
+        [
+          252,
+          265
+        ]
+      ]
+    },
+    {
+      "question_id": "refund_requested",
+      "question_type": 0,
+      "question_span": [
+        288,
+        295
+      ],
+      "option_ids": [
+        "true",
+        "false"
+      ],
+      "option_spans": [
+        [
+          306,
+          324
+        ],
+        [
+          330,
+          348
+        ]
+      ]
+    }
+  ],
+  "head_name": "head",
+  "head_config": {
+    "hidden_size": 2560,
+    "width": 512,
+    "n_types": 3,
+    "routing_layers": 2,
+    "layers": 4,
+    "option_projections": [
+      "memory_projection",
+      "question_projection",
+      "option_question_projection",
+      "global_projection",
+      "option_context_projection",
+      "option_lexical_projection"
+    ]
+  },
+  "module_trace": [
+    {
+      "module": "option_context_projection",
+      "shape": [
+        1,
+        9,
+        512
+      ],
+      "min": -1.7969,
+      "max": 1.6641,
+      "mean": -0.0084
+    },
+    {
+      "module": "option_lexical_projection",
+      "shape": [
+        1,
+        9,
+        512
+      ],
+      "min": -0.0121,
+      "max": 0.0129,
+      "mean": -0.0001
+    },
+    {
+      "module": "option_question_projection",
+      "shape": [
+        1,
+        9,
+        512
+      ],
+      "min": -1.3359,
+      "max": 1.4219,
+      "mean": -0.0047
+    },
+    {
+      "module": "question_projection",
+      "shape": [
+        1,
+        3,
+        512
+      ],
+      "min": -1.6094,
+      "max": 1.5469,
+      "mean": -0.0082
+    },
+    {
+      "module": "option_summary_norm",
+      "shape": [
+        1,
+        3,
+        512
+      ],
+      "min": -3.3839,
+      "max": 3.3942,
+      "mean": 0.0
+    },
+    {
+      "module": "global_projection",
+      "shape": [
+        1,
+        512
+      ],
+      "min": -2.1562,
+      "max": 2.7812,
+      "mean": 0.0225
+    },
+    {
+      "module": "type_embedding",
+      "shape": [
+        1,
+        3,
+        512
+      ],
+      "min": -3.25,
+      "max": 3.4531,
+      "mean": 0.0312
+    },
+    {
+      "module": "layers.0",
+      "shape": [
+        1,
+        3,
+        512
+      ],
+      "min": -6.3735,
+      "max": 7.3283,
+      "mean": 0.0493
+    },
+    {
+      "module": "layers.3",
+      "shape": [
+        1,
+        3,
+        512
+      ],
+      "min": -10.6709,
+      "max": 14.8176,
+      "mean": 0.006
+    },
+    {
+      "module": "field_norm",
+      "shape": [
+        1,
+        3,
+        512
+      ],
+      "min": -3.314,
+      "max": 4.9595,
+      "mean": 0.0
+    },
+    {
+      "module": "option_norm",
+      "shape": [
+        1,
+        9,
+        512
+      ],
+      "min": -3.7969,
+      "max": 3.3281,
+      "mean": -0.0001
+    },
+    {
+      "module": "residual_scorer",
+      "shape": [
+        1,
+        9,
+        1
+      ],
+      "min": -8.3125,
+      "max": 4.0,
+      "mean": -2.8594
+    }
+  ],
+  "decision_config": {
+    "layout": "clef",
+    "max_len": 1024,
+    "temperature": [
+      1.3385570049285889,
+      0.5,
+      1.2190741300582886
+    ],
+    "fine_tuned": true,
+    "folded_temperature": 1.0544098615646362
+  },
+  "per_question": [
+    {
+      "question_id": "route",
+      "type": "choice",
+      "option_ids": [
+        "account",
+        "billing",
+        "other",
+        "technical"
+      ],
+      "raw_logits": [
+        -3.7722,
+        2.2082,
+        -4.1289,
+        -2.9848
+      ],
+      "temperature": 1.3386,
+      "probabilities": {
+        "account": 0.011022,
+        "billing": 0.960687,
+        "other": 0.008443,
+        "technical": 0.019848
+      },
+      "answer": {
+        "type": "choice",
+        "choice": "billing",
+        "confidence": 0.9607,
+        "probabilities": {
+          "billing": 0.9607,
+          "account": 0.011,
+          "technical": 0.0198,
+          "other": 0.0084
+        }
+      }
+    },
+    {
+      "question_id": "urgency",
+      "type": "score",
+      "option_ids": [
+        "0",
+        "1",
+        "2"
+      ],
+      "raw_logits": [
+        -3.6958,
+        -0.0214,
+        1.6555
+      ],
+      "temperature": 0.5,
+      "probabilities": {
+        "0": 2.2e-05,
+        "1": 0.033766,
+        "2": 0.966213
+      },
+      "answer": {
+        "type": "score",
+        "score": 1.9662,
+        "confidence": 0.9662,
+        "legend": {
+          "0": "可以正常排队等待",
+          "1": "需要优先处理",
+          "2": "需要立即人工介入"
+        },
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0338,
+          "2": 0.9662
+        }
+      }
+    },
+    {
+      "question_id": "refund_requested",
+      "type": "noul",
+      "option_ids": [
+        "true",
+        "false"
+      ],
+      "raw_logits": [
+        2.1773,
+        -2.9192
+      ],
+      "temperature": 1.2191,
+      "probabilities": {
+        "true": 0.984941,
+        "false": 0.015059
+      },
+      "answer": {
+        "type": "noul",
+        "noul": 0.9849
+      }
+    }
+  ],
+  "answers": {
+    "route": {
+      "type": "choice",
+      "choice": "billing",
+      "confidence": 0.9607,
+      "probabilities": {
+        "billing": 0.9607,
+        "account": 0.011,
+        "technical": 0.0198,
+        "other": 0.0084
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "score": 1.9662,
+      "confidence": 0.9662,
+      "legend": {
+        "0": "可以正常排队等待",
+        "1": "需要优先处理",
+        "2": "需要立即人工介入"
+      },
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0338,
+        "2": 0.9662
+      }
+    },
+    "refund_requested": {
+      "type": "noul",
+      "noul": 0.9849
+    }
+  }
+}

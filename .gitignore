@@ -1,0 +1,29 @@
+# 底座模型体积过大（约 11 GB），自行下载
+models/
+*.safetensors.index.json
+
+# 原始数据与派生 parquet：上游为来源依赖型许可，不在本仓库分发
+data/**/*.parquet
+!data/hybrid_v3/manifest.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# 训练产物 / 临时输出
+runs/
+*.log
+!results/*.log
+checkpoints/
+*.zip
+*.tar.gz
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.codegraph/

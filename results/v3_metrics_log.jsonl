@@ -1,0 +1,4 @@
+{"step": 100, "split": "validation", "elapsed_s": 908.6, "accuracy": 0.792687, "ece": 0.037188, "loss": 0.491757, "record_accuracy": 0.448498}
+{"step": 200, "split": "validation", "elapsed_s": 1758.8, "accuracy": 0.829253, "ece": 0.05557, "loss": 0.393666, "record_accuracy": 0.517167}
+{"step": 300, "split": "validation", "elapsed_s": 2668.0, "accuracy": 0.869316, "ece": 0.027564, "loss": 0.306124, "record_accuracy": 0.61588}
+{"step": 400, "split": "validation", "elapsed_s": 3563.8, "accuracy": 0.881081, "ece": 0.025345, "loss": 0.288714, "record_accuracy": 0.646996}
