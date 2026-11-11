@@ -1,5 +1,6 @@
 """v3 数据验证：泄漏 / 长度 / build_dataset skipped。"""
 import collections
+import hashlib
 import json
 import os
 import random
@@ -12,14 +13,30 @@ from datasets import Dataset
 
 ROOT = r"data/hybrid_v3"
 SPLITS = ("train","calibration","validation","test","ood")
-all_groups = {}
+
+missing = [sp for sp in SPLITS
+           if not os.path.exists(os.path.join(ROOT, sp+".parquet"))]
+assert not missing, (
+    f"缺少切分文件 {missing}；parquet 未在仓库分发，"
+    "请按 README 用 make_hybrid_v3.py 生成后再运行本校验")
+
+all_groups, all_states, all_samples = {}, {}, {}
 for sp in SPLITS:
     rows = pq.read_table(os.path.join(ROOT, sp+".parquet")).to_pylist()
     all_groups[sp] = {r["group_id"] for r in rows}
-leaks = [(a,b,len(all_groups[a]&all_groups[b]))
-         for i,a in enumerate(SPLITS) for b in SPLITS[i+1:]
-         if all_groups[a]&all_groups[b]]
-print("跨 split group 泄漏:", "无" if not leaks else leaks, flush=True)
+    all_states[sp] = {hashlib.sha256(r["state"].encode("utf-8")).hexdigest()
+                      for r in rows}
+    all_samples[sp] = {
+        hashlib.sha256((r["state"] + "||" + r["questions"]).encode("utf-8")).hexdigest()
+        for r in rows}
+
+pairs = [(a, b) for i, a in enumerate(SPLITS) for b in SPLITS[i+1:]]
+for label, index in (("group_id", all_groups),
+                     ("state 文本", all_states),
+                     ("(state, questions) 整条", all_samples)):
+    leaks = [(a, b, len(index[a] & index[b])) for a, b in pairs if index[a] & index[b]]
+    assert not leaks, f"{label} 跨 split 泄漏: {leaks}"
+    print(f"[OK] {label}: {len(pairs)} 对切分两两交集全为 0", flush=True)
 
 tok = AutoTokenizer.from_pretrained(r"model/adapter_v3")
 for sp in SPLITS:
