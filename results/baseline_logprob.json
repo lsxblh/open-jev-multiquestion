@@ -1,0 +1,26 @@
+{
+  "method": "LM head logprob on option-letter tokens, zero new parameters",
+  "base": "/mnt/workspace/models/Qwen3.5-4B",
+  "test": "/mnt/workspace/data/hybrid_v3/test.parquet",
+  "n": 7136,
+  "limit": 0,
+  "accuracy": 0.6672,
+  "by_kind": {
+    "choice": {
+      "accuracy": 0.3963,
+      "n": 1640
+    },
+    "score": {
+      "accuracy": 0.4375,
+      "n": 816
+    },
+    "noul": {
+      "accuracy": 0.8021,
+      "n": 4680
+    }
+  },
+  "avg_seconds_per_item": 0.113,
+  "total_seconds": 806.0,
+  "note": "零新增参数基线；prompt 为中性模板，未做 prompt 调优。与 V3 用同一份 test.parquet 与同一 4-bit 底座。",
+  "source": "云端 A10 全量运行日志 baseline_logprob.log（2026-11-12）"
+}
